@@ -25,10 +25,12 @@ input.onButtonPressed(Button.B, function () {
         setGroup += 1
     }
 })
+radio.onReceivedValue(function (name, value) {
+    basic.showString(name)
+    basic.showNumber(value)
+})
 let setGroup = 0
 let settingGroup = false
 basic.pause(500)
-if (!(input.buttonIsPressed(Button.AB))) {
-    basic.showString("Set group before usage")
-}
+basic.showString("Set group before usage")
 Set_group()
